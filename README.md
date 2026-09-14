@@ -3,6 +3,9 @@
 A field journal for deer hunters — track sightings, decode how moon phase and
 weather drive deer movement, and score trophy antlers.
 
+**Live:** https://cbreaux108-art.github.io/DEERDIARY/ (deployed automatically
+by `.github/workflows/deploy-pages.yml` — see [Deployment](#deployment)).
+
 ## Features
 
 - **Camp (home dashboard)** — live moon phase, a real-time weather snapshot
@@ -45,6 +48,17 @@ npm run dev      # start the dev server
 npm run build    # typecheck + production build
 npm run lint      # oxlint
 ```
+
+## Deployment
+
+Pushing to `main` (or this branch) triggers
+`.github/workflows/deploy-pages.yml`, which builds the site with
+`GH_PAGES=true` (so asset paths are prefixed for `/DEERDIARY/`) and deploys
+it via GitHub Pages. It can also be run manually from the **Actions** tab.
+
+**One-time setup required:** in the repo's **Settings → Pages**, set
+**Build and deployment → Source** to **GitHub Actions**. Until that's set,
+the workflow will run but Pages won't actually serve the result.
 
 ## Mobile app (Android / iOS)
 

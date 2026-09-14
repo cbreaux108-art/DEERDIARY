@@ -10,7 +10,7 @@ import { AppDataProvider } from "./store/AppData";
 export default function App() {
   return (
     <AppDataProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <div className="flex min-h-screen flex-col">
           <Nav />
           <main className="flex-1">
